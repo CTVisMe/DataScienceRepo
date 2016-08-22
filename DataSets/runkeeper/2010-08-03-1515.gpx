@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.1"
+  creator="Runkeeper - http://www.runkeeper.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+  xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1">
+<trk>
+  <name><![CDATA[Cycling 8/3/10 3:15 pm]]></name>
+  <time>2010-08-03T15:15:22Z</time>
+<trkseg>
+<trkpt lat="49.295104000" lon="-123.135055000"><ele>4.0</ele><time>2010-08-03T15:15:22Z</time></trkpt>
+<trkpt lat="49.294958000" lon="-123.134980000"><ele>4.1</ele><time>2010-08-03T15:15:32Z</time></trkpt>
+<trkpt lat="49.294852000" lon="-123.135280000"><ele>4.2</ele><time>2010-08-03T15:15:38Z</time></trkpt>
+<trkpt lat="49.294862000" lon="-123.135583000"><ele>4.3</ele><time>2010-08-03T15:15:42Z</time></trkpt>
+<trkpt lat="49.294969000" lon="-123.135785000"><ele>4.4</ele><time>2010-08-03T15:15:46Z</time></trkpt>
+<trkpt lat="49.295099000" lon="-123.135995000"><ele>4.5</ele><time>2010-08-03T15:15:49Z</time></trkpt>
+<trkpt lat="49.295462000" lon="-123.136034000"><ele>4.1</ele><time>2010-08-03T15:16:08Z</time></trkpt>
+<trkpt lat="49.295462000" lon="-123.136034000"><ele>3.6</ele><time>2010-08-03T15:16:09Z</time></trkpt>
+<trkpt lat="49.295889000" lon="-123.135732000"><ele>3.2</ele><time>2010-08-03T15:16:32Z</time></trkpt>
+<trkpt lat="49.296238000" lon="-123.135438000"><ele>2.9</ele><time>2010-08-03T15:16:42Z</time></trkpt>
+<trkpt lat="49.296470000" lon="-123.135220000"><ele>2.6</ele><time>2010-08-03T15:16:59Z</time></trkpt>
+<trkpt lat="49.296756000" lon="-123.134393000"><ele>2.4</ele><time>2010-08-03T15:17:21Z</time></trkpt>
+<trkpt lat="49.296929000" lon="-123.133732000"><ele>1.9</ele><time>2010-08-03T15:17:29Z</time></trkpt>
+<trkpt lat="49.297000000" lon="-123.133369000"><ele>1.5</ele><time>2010-08-03T15:17:34Z</time></trkpt>
+<trkpt lat="49.296998000" lon="-123.133121000"><ele>1.3</ele><time>2010-08-03T15:17:39Z</time></trkpt>
+<trkpt lat="49.296958000" lon="-123.132860000"><ele>0.8</ele><time>2010-08-03T15:17:43Z</time></trkpt>
+<trkpt lat="49.296900000" lon="-123.132632000"><ele>0.3</ele><time>2010-08-03T15:17:49Z</time></trkpt>
+<trkpt lat="49.296894000" lon="-123.132585000"><ele>0.3</ele><time>2010-08-03T15:17:50Z</time></trkpt>
+<trkpt lat="49.296904000" lon="-123.132340000"><ele>0.3</ele><time>2010-08-03T15:17:56Z</time></trkpt>
+<trkpt lat="49.297296000" lon="-123.131570000"><ele>0.3</ele><time>2010-08-03T15:18:20Z</time></trkpt>
+<trkpt lat="49.297579000" lon="-123.131053000"><ele>0.4</ele><time>2010-08-03T15:18:31Z</time></trkpt>
+<trkpt lat="49.297767000" lon="-123.130397000"><ele>0.4</ele><time>2010-08-03T15:18:43Z</time></trkpt>
+<trkpt lat="49.297715000" lon="-123.129995000"><ele>0.5</ele><time>2010-08-03T15:18:48Z</time></trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="49.297715000" lon="-123.129995000"><ele>0.0</ele><time>2010-08-03T15:22:41Z</time></trkpt>
+<trkpt lat="49.297715000" lon="-123.129995000"><ele>0.0</ele><time>2010-08-03T15:22:41Z</time></trkpt>
+</trkseg>
+</trk>
+</gpx>

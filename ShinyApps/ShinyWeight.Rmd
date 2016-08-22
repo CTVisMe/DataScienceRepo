@@ -1,0 +1,57 @@
+---
+title: "ShinyWeight"
+author: "CTV"
+date: "October 9, 2015"
+output: html_document
+runtime: shiny
+---
+
+I have measured my weight every day for the past few years using a [Withings Wifi scale](http://www.withings.com/us/en/products/smart-body-analyzer).  Here is a visualization of that.
+
+The date range and the smoothing parameter can be adjusted via shiny widgets. 
+
+```{r, echo=FALSE}
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+source("RFirst.R")
+
+datafile="LatestWeight.csv"
+weight=read.csv(datafile,header=T)
+names(weight)=qw("ts weight fat lean comments")
+weight$ts = parse_date_time(weight$ts,"%Y-%m-%d %H:%M %p")
+
+dateInput("startdate",label="Start Date",value=min(weight$ts))
+
+dateInput("enddate",label="End Date",value=max(weight$ts))
+
+sliderInput("numspan",label="Span of Loess Smooth",min=0.05,max=0.5,step=0.05,value=0.25)
+
+wtmat=reactive({
+  filter(weight,weight$ts>=ymd(input$startdate) & weight$ts<ymd(input$enddate))
+  })
+
+
+
+```
+
+
+There are **`r renderText({nrow(wtmat())})`** measurements between **`r renderText({as.character(input$startdate)})`** and **`r renderText({as.character(input$enddate)})`** with an average weight of  **`r renderText({round(mean(wtmat()$weight,na.rm=TRUE),2)})` **
+
+``` {r echo=FALSE}
+
+# this works!! 
+#renderPlot ({
+#  qplot(ts,weight,data=wtmat(),geom="line")
+#})
+
+renderPlot ({
+  p=ggplot(wtmat(),aes(ts,weight),main="Plot") + 
+    geom_point(alpha=0.8) + 
+    stat_smooth(method="loess",size=2,se=FALSE,span=input$numspan) 
+  p
+})
+
+
+
+

@@ -1,0 +1,28 @@
+---
+title: "Reusing code chunks"
+output: html_document
+---
+
+```{r test-a}
+x = rnorm(30)
+if (any(abs(x) > 1.5)) {
+  x
+}
+```
+
+## Same label
+
+```{r test-a, prompt=TRUE}
+```
+
+## Embedding
+
+```{r test-b}
+<<test-a>>
+y = x^2
+```
+
+## Use the `ref.label` option
+
+```{r test-c, ref.label=c('test-a', 'test-b')}
+```

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.1"
+  creator="Runkeeper - http://www.runkeeper.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+  xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1">
+<trk>
+  <name><![CDATA[Cycling 9/25/10 2:52 pm]]></name>
+  <time>2010-09-25T14:52:45Z</time>
+<trkseg>
+<trkpt lat="40.773408000" lon="-74.463937000"><ele>90.5</ele><time>2010-09-25T14:52:45Z</time></trkpt>
+<trkpt lat="40.773900000" lon="-74.464572000"><ele>90.9</ele><time>2010-09-25T14:53:53Z</time></trkpt>
+<trkpt lat="40.773764000" lon="-74.465211000"><ele>91.1</ele><time>2010-09-25T14:54:09Z</time></trkpt>
+<trkpt lat="40.773770000" lon="-74.465804000"><ele>91.3</ele><time>2010-09-25T14:54:22Z</time></trkpt>
+<trkpt lat="40.773971000" lon="-74.466316000"><ele>91.5</ele><time>2010-09-25T14:54:35Z</time></trkpt>
+<trkpt lat="40.774110000" lon="-74.466897000"><ele>91.8</ele><time>2010-09-25T14:54:48Z</time></trkpt>
+<trkpt lat="40.774356000" lon="-74.467377000"><ele>91.6</ele><time>2010-09-25T14:55:08Z</time></trkpt>
+<trkpt lat="40.774793000" lon="-74.467330000"><ele>92.1</ele><time>2010-09-25T14:55:18Z</time></trkpt>
+<trkpt lat="40.775246000" lon="-74.467295000"><ele>92.3</ele><time>2010-09-25T14:55:29Z</time></trkpt>
+<trkpt lat="40.775409000" lon="-74.467273000"><ele>93.4</ele><time>2010-09-25T14:55:33Z</time></trkpt>
+<trkpt lat="40.775576000" lon="-74.467257000"><ele>93.7</ele><time>2010-09-25T14:55:37Z</time></trkpt>
+<trkpt lat="40.775749000" lon="-74.467247000"><ele>94.4</ele><time>2010-09-25T14:55:41Z</time></trkpt>
+<trkpt lat="40.775922000" lon="-74.467242000"><ele>94.7</ele><time>2010-09-25T14:55:45Z</time></trkpt>
+<trkpt lat="40.776095000" lon="-74.467238000"><ele>94.9</ele><time>2010-09-25T14:55:49Z</time></trkpt>
+<trkpt lat="40.776274000" lon="-74.467243000"><ele>95.1</ele><time>2010-09-25T14:55:53Z</time></trkpt>
+<trkpt lat="40.776727000" lon="-74.467175000"><ele>95.4</ele><time>2010-09-25T14:56:03Z</time></trkpt>
+<trkpt lat="40.777158000" lon="-74.467076000"><ele>95.4</ele><time>2010-09-25T14:56:12Z</time></trkpt>
+<trkpt lat="40.777482000" lon="-74.467105000"><ele>95.5</ele><time>2010-09-25T14:56:20Z</time></trkpt>
+</trkseg>
+</trk>
+</gpx>

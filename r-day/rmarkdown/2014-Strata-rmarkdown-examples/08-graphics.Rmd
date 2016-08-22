@@ -1,0 +1,22 @@
+---
+title: "Graphics output"
+author: "Yihui Xie"
+output:
+  html_document:
+    fig_caption: yes
+    fig_retina: null
+    self_contained: no
+---
+
+```{r demo, dev='svg'}
+par(mar=c(4,4,1,1))
+plot(cars)         # high-level plot
+abline(-18, 4)     # low-level change
+
+plot(rnorm(10)) # high-level plot
+## many low-level changes in a loop (a single R expression)
+for(i in 1:10) {
+  abline(v = i, lty = 2)
+}
+```
+

@@ -1,0 +1,27 @@
+---
+title: "A main document with a child document"
+output: html_document
+---
+
+Some words from the main document, and a code chunk:
+
+```{r}
+x = rnorm(10)
+```
+
+Then a child document:
+
+```{r child='11-child.Rmd'}
+```
+
+Continue the main document. The value of y is `r y`.
+
+You can also call `knit_child()` to knit a child document manually.
+
+```{r include=FALSE}
+x = rnorm(500)
+out = knitr::knit_child('11-child.Rmd', quiet = TRUE)
+```
+
+
+After we manually knit the child document, the value of y is `r y` now.

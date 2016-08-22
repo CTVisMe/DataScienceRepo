@@ -1,0 +1,46 @@
+---
+title: "Caching intensive computing"
+output: html_document
+---
+
+The **digest** package.
+
+```{r digest-demo}
+d = digest::digest
+## imagine x$code is the code chunk; x$options are chunk options
+x = list(code = '1+1', options=list(results='asis', fig.height=3), width=getOption('width'))
+d(x)
+x$code = '1 + 1' # add spaces to code
+d(x)
+x$options$eval=FALSE # add option eval as FALSE
+d(x)
+x$width=40
+d(x)
+```
+
+A time-consuming example (this example requires you to install FFmpeg, and `ffmpeg` must be on `PATH`):
+
+```{r animation, cache=TRUE, fig.show='animate', interval=.2, fig.height=5}
+stopifnot(Sys.which('ffmpeg') != '')
+library(animation) # example
+demo('Mandelbrot', package = 'animation', echo = FALSE)
+```
+
+Suppose you want to make the cache system know the changes in foo.csv (when the modification time changes, the cache must update):
+
+    `r ''````{r test-b, cache=TRUE, cache.csv=file.info('foo.csv')}
+    x = read.csv('foo.csv')
+    ```
+
+Other cache options: cache.lazy, cache.comments, cache.vars.
+
+```{r cache-opts}
+x = rnorm(10000)
+y = x^2
+```
+
+Caveats: be careful with side-effects!
+
+```{r cache=FALSE}
+options(stringsAsFactors = FALSE)
+```

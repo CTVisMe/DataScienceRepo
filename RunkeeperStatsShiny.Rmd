@@ -1,0 +1,55 @@
+---
+title: "RunkeeperStats"
+author: "CTV"
+date: "November 20, 2015"
+output: html_document
+runtime: shiny
+---
+
+Lets explore my Runkeeper data...
+
+
+```{r, echo=FALSE}
+
+# imports packages and functions I need
+source("~/DataScience/RFirst.R")
+
+library(shiny)
+
+
+cardio=read.csv('~/DataScience/DataSets/runkeeper/cardioActivities.csv',stringsAsFactors=FALSE,na.strings="")
+
+names(cardio)=qw("dt type routename distance duration pace speed calories climb hr notes gpx")
+cardio$dt=parse_date_time(cardio$dt,"ymd_hms")
+cardio=mutate(cardio,year=year(cardio$dt),paceSeconds=period_to_seconds(ms(pace)))
+
+radioButtons("extype",label="Choose Type of Exercise",choices=c('Running','Cycling','Downhill Skiing'))
+
+exmat=reactive({
+  filter(cardio,type==input$extype)
+  })
+
+
+
+```
+
+Input type is `r renderText({input$extype})`
+There are `r renderText({nrow(exmat())})` measurements from `r renderText({input$extype})`
+Mintime = `r renderText({min(exmat()$paceSeconds,na.rm=T)})`
+
+``` {r echo=FALSE}
+# 
+# renderPlot ({
+#  qplot(distance,pace,data=exmat(),geom="point")
+# })
+
+renderPlot ({
+  maxtime=max(exmat()$paceSeconds,na.rm=T)
+  mintime=min(exmat()$paceSeconds,na.rm=T)
+  g=ggplot(exmat(),aes(x=distance,y=paceSeconds,color=year))
+  g + geom_point() +
+    scale_y_continuous(breaks=c(seq(0,maxtime,120)),
+                       labels=paste0(as.character(seq(0,maxtime,120)/60),":00"))
+    
+})
+

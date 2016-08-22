@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.1"
+  creator="Runkeeper - http://www.runkeeper.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+  xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1">
+<trk>
+  <name><![CDATA[Walking 8/11/14 2:51 pm]]></name>
+  <time>2014-08-11T18:51:19Z</time>
+<trkseg>
+<trkpt lat="40.670027000" lon="-74.636043000"><ele>62.3</ele><time>2014-08-11T18:51:19Z</time></trkpt>
+<trkpt lat="40.670036000" lon="-74.636093000"><ele>62.3</ele><time>2014-08-11T18:51:20Z</time></trkpt>
+<trkpt lat="40.670081000" lon="-74.636196000"><ele>61.8</ele><time>2014-08-11T18:51:28Z</time></trkpt>
+<trkpt lat="40.670033000" lon="-74.636506000"><ele>61.3</ele><time>2014-08-11T18:52:02Z</time></trkpt>
+<trkpt lat="40.669889000" lon="-74.636810000"><ele>61.0</ele><time>2014-08-11T18:52:04Z</time></trkpt>
+<trkpt lat="40.669788000" lon="-74.636955000"><ele>60.7</ele><time>2014-08-11T18:52:05Z</time></trkpt>
+<trkpt lat="40.669695000" lon="-74.636840000"><ele>60.5</ele><time>2014-08-11T18:52:14Z</time></trkpt>
+<trkpt lat="40.669559000" lon="-74.636659000"><ele>60.2</ele><time>2014-08-11T18:52:49Z</time></trkpt>
+<trkpt lat="40.669414000" lon="-74.636632000"><ele>60.0</ele><time>2014-08-11T18:52:51Z</time></trkpt>
+<trkpt lat="40.669363000" lon="-74.636740000"><ele>59.7</ele><time>2014-08-11T18:52:53Z</time></trkpt>
+<trkpt lat="40.669363000" lon="-74.636740000"><ele>59.3</ele><time>2014-08-11T18:52:54Z</time></trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="40.669487000" lon="-74.637829000"><ele>53.0</ele><time>2014-08-11T18:53:22Z</time></trkpt>
+<trkpt lat="40.669516000" lon="-74.637866000"><ele>53.6</ele><time>2014-08-11T18:53:24Z</time></trkpt>
+<trkpt lat="40.669313000" lon="-74.637466000"><ele>54.0</ele><time>2014-08-11T18:53:29Z</time></trkpt>
+<trkpt lat="40.669240000" lon="-74.637372000"><ele>54.4</ele><time>2014-08-11T18:53:32Z</time></trkpt>
+<trkpt lat="40.669378000" lon="-74.637556000"><ele>54.8</ele><time>2014-08-11T18:54:10Z</time></trkpt>
+<trkpt lat="40.669485000" lon="-74.637686000"><ele>55.1</ele><time>2014-08-11T18:54:12Z</time></trkpt>
+<trkpt lat="40.669566000" lon="-74.637771000"><ele>56.6</ele><time>2014-08-11T18:54:13Z</time></trkpt>
+<trkpt lat="40.669367000" lon="-74.637277000"><ele>58.2</ele><time>2014-08-11T18:54:15Z</time></trkpt>
+<trkpt lat="40.669465000" lon="-74.636995000"><ele>58.1</ele><time>2014-08-11T18:54:57Z</time></trkpt>
+<trkpt lat="40.669565000" lon="-74.636712000"><ele>58.2</ele><time>2014-08-11T18:54:59Z</time></trkpt>
+<trkpt lat="40.669572000" lon="-74.636589000"><ele>58.3</ele><time>2014-08-11T18:55:05Z</time></trkpt>
+<trkpt lat="40.669640000" lon="-74.636673000"><ele>58.4</ele><time>2014-08-11T18:55:51Z</time></trkpt>
+<trkpt lat="40.669754000" lon="-74.636607000"><ele>58.6</ele><time>2014-08-11T18:56:36Z</time></trkpt>
+<trkpt lat="40.675202000" lon="-74.632183000"><ele>58.8</ele><time>2014-08-11T18:59:14Z</time></trkpt>
+<trkpt lat="40.676290000" lon="-74.631537000"><ele>58.9</ele><time>2014-08-11T18:59:36Z</time></trkpt>
+<trkpt lat="40.676290000" lon="-74.631537000"><ele>59.0</ele><time>2014-08-11T18:59:41Z</time></trkpt>
+</trkseg>
+<trkseg>
+<trkpt lat="40.672643000" lon="-74.634512000"><ele>57.0</ele><time>2014-08-11T19:00:20Z</time></trkpt>
+<trkpt lat="40.672643000" lon="-74.634512000"><ele>57.0</ele><time>2014-08-11T19:00:20Z</time></trkpt>
+</trkseg>
+</trk>
+</gpx>

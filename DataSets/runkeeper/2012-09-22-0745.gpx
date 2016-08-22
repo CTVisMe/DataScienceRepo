@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.1"
+  creator="Runkeeper - http://www.runkeeper.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+  xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1">
+<trk>
+  <name><![CDATA[Cycling 9/22/12 7:45 am]]></name>
+  <time>2012-09-22T07:45:06Z</time>
+<trkseg>
+<trkpt lat="40.795754000" lon="-74.457463000"><ele>122.0</ele><time>2012-09-22T07:45:06Z</time></trkpt>
+<trkpt lat="40.795741000" lon="-74.457556000"><ele>122.0</ele><time>2012-09-22T07:45:12Z</time></trkpt>
+<trkpt lat="40.795692000" lon="-74.457626000"><ele>122.0</ele><time>2012-09-22T07:45:16Z</time></trkpt>
+</trkseg>
+</trk>
+</gpx>

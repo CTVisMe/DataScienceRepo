@@ -1,0 +1,96 @@
+---
+title: "Stat416 Homework 5"
+author: "Yihui Xie"
+date: "04/09/2014"
+output:
+  html_document: default
+  pdf_document:
+    toc: yes
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(tidy = TRUE)
+```
+
+In this homework, we were asked to find out the genes that should be identified as differentially expressed. Here we go.
+
+First we read the P-values into R:
+
+```{r read-pvalues, echo=TRUE}
+# set the alpha level
+a = 0.05
+# read the P-values
+p = scan('01-hwk5_q1.txt')
+p  # print them
+par(mar = c(4, 4, .1, .1))
+barplot(p, names.arg = seq_along(p))
+abline(h = a, col = 'red')
+```
+
+We need to adjust these `r length(p)` P-values using these methods:
+
+- Bonferroni's method (threshhold $c = \alpha/m$)
+- Holm's method (largest $i$ s.t. $p_{(i)} \leq \alpha/(m - i + 1)$)
+- Benjamini and Hochberg's method
+
+## Hard-working students
+
+To understand our methods completely, we have to write every piece of code by hand. For example, we write the Bonferroni's method below, and pick out the genes:
+
+```{r}
+#' @param pv a vector of P-values
+#' @param alpha the alpha level
+#' @return the indices of the genes
+p_bonferroni = function(pv, alpha = 0.05) {
+  m = length(pv)
+  c = alpha/m
+  which(pv <= c)
+}
+p_bonferroni(p)
+p_holm = function(...) {
+  ...
+}
+p_BH = function(...) {
+  ...
+}
+```
+
+Now we have finished our homework, and we are confident that we understand how each method works in practice.
+
+## Lazy (but smart) students
+
+Some students quickly realized the `p.adjust()` function in base R. Five minutes later, they finished the homework and went for beer. Yeah!
+
+```{r}
+(p1 = p.adjust(p, method = 'bonferroni'))
+(p2 = p.adjust(p, method = 'holm'))
+(p3 = p.adjust(p, method = 'BH'))
+```
+
+## Final results
+
+```{r include=FALSE}
+#' @param i the indices of genes
+gene_list = function(i) {
+  if (is.logical(i)) {
+    i = which(i)
+  }
+  n = length(i)
+  text = if (n <= 1) {
+    i
+  } else if (n == 2) {
+    paste(i[1], i[2], sep = ' and ')
+  } else {
+    paste(i, rep(c(', ', ', and ', ''), c(n - 2, 1, 1)), sep = '', collapse = '')
+  }
+  paste('the', ifelse(n <= 1, 'gene', 'genes'), text)
+}
+# test this little function
+gene_list(1)
+gene_list(c(1, 3))
+gene_list(1:10)
+gene_list(c(TRUE, FALSE, FALSE, TRUE, TRUE))
+```
+
+We identified `r gene_list(p1 <= a)` using Bonferroni's method, `r gene_list(p2 <= a)` using Holm's method, and `r gene_list(p3 <= a)` using BH's method.

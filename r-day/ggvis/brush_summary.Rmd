@@ -1,0 +1,46 @@
+---
+title: "ggvis in an interactive document"
+output: html_document
+runtime: shiny
+---
+
+```{r echo=FALSE, message=FALSE}
+library(knitr)
+library(ggvis)
+library(shiny)
+```
+
+An interactive plot:
+
+```{r, message = FALSE, fig.width = 6, fig.height = 4}
+# Add an id column to mtcars, to use as key for brushing
+mtcars$id <- seq_len(nrow(mtcars))
+
+# Create a linked brush object
+lb <- linked_brush(keys = mtcars$id, "red")
+
+# A reactive data set that returns just the brushed points, or, if no points
+# are selected, return all the points.
+mtcars_selected <- reactive({
+  if (!any(lb$selected()))
+    return(mtcars)
+  mtcars[lb$selected(), ]
+})
+
+mtcars %>%
+  ggvis(~wt, ~mpg) %>%
+  layer_points(fill := lb$fill, fill.brush := "red") %>%
+  lb$input() %>%
+  add_data(mtcars_selected) %>%          # Use the selected points to compute a lm line
+  layer_model_predictions(model = "lm")
+```
+
+
+A summary of the selected points:
+
+```{r, echo = FALSE}
+renderPrint({
+  cat("Number of points selected: ", nrow(mtcars_selected()), "\n\n")
+  print(summary(mtcars_selected()))
+})
+```

@@ -1,0 +1,46 @@
+---
+title: "What's in a name"
+output: html_document
+runtime: shiny
+---
+
+Data Scientist and Master Instructor  
+garrett@rstudio.com  
+[rstudio.com](www.rstudio.com)  
+Orlando, FL  
+
+****
+
+****
+
+## What's in a name?
+
+```{r echo=FALSE, message=FALSE}
+library(babynames)
+library(dplyr, warn.conflicts = FALSE)
+library(ggplot2, warn.conflicts = FALSE)
+
+textInput("entername",label="Enter Name",value="Enter Name Here")
+
+  namemat = reactive({
+    filter(babynames, name == input$entername)
+    })
+
+
+  
+  renderText({ sum(namemat()$n) })
+  
+```
+
+The name you entered is 
+`r renderText(input$entername)`
+
+Here is a graph of the number of people named Christopher.
+
+```{r echo=FALSE, fig.height=3, fig.width=5}
+
+renderPlot({
+  qplot(year, n, data = namemat(), geom ="line", color = sex) + theme_bw()
+  })
+```
+runApp("~/R/r-day/shiny")
